@@ -29,7 +29,7 @@ gem 'slim'
 gem 'omniauth-github', :github => 'intridea/omniauth-github'
 gem "font-awesome-rails"
 gem "octokit", "~> 3.0"
-gem 'formtastic'
+gem 'formtastic', '~> 3.0'
 gem 'formtastic-bootstrap'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -64,4 +64,8 @@ group :test do
   gem 'shoulda-matchers'
   gem 'cucumber-rails', require: false
   gem 'database_cleaner'
+end
+
+group :production do
+  gem 'rails_serve_static_assets'
 end
