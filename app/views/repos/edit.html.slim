@@ -1,0 +1,22 @@
+.container
+  = semantic_form_for current_user do |f|
+    .row
+      .col-md-8
+        h4 Subscribe to daily or weekly notifications of changes
+      .col-md-4
+        = f.actions do
+          = f.action :submit, :as => :button, label: "Save Changes", :button_html => { class: "btn pull-right btn-info" }
+    .row
+      .col-md-12
+        = f.inputs do
+          table.table
+            thead
+              th Repository
+              th Email Frequency 
+            tbody
+              = f.semantic_fields_for :repos do |repo| 
+                tr
+                  td= repo.object.name
+                  td= repo.input :email_frequency, label: false, :as => :radio, :collection => ["off", "daily", "weekly"] 
+        = f.actions do
+          = f.action :submit, :as => :button, label: "Save Changes", :button_html => { class: "btn pull-right btn-info" }
