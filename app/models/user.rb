@@ -14,14 +14,34 @@ class User < ActiveRecord::Base
     end
   end
 
+  def self.wanting_daily_emails
+    User.includes(:repos).where(repos: { email_frequency: 'daily' })
+  end
+
+  def self.wanting_weekly_emails
+    User.includes(:repos).where(repos: { email_frequency: 'weekly' })
+  end
+  
+
   def get_repos
     new_repos = github.repos
+    github.list_organizations.each do |org|
+      new_repos += github.org_repositories(org['login']) 
+    end
+    
     new_repos.each do |r|
       self.repos.find_or_create_by(name: r['full_name'])
     end
     self.repos
   end
 
+  def repo_daily_commits(repo_name, start_date, end_date)
+    if start_date
+      return github.commits_between(repo_name, start_date, end_date)
+    else
+      return github.commits_on(repo_name, end_date) 
+    end
+  end
 
 end
 

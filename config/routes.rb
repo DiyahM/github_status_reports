@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get 'auth/github', as: :github_auth
 
   get 'auth/:auth/callback' => 'sessions#create'
+  get 'logout' => 'sessions#destroy', as: :logout
   get 'repos' => 'repos#edit', as: :user_repos
   resources :users
 

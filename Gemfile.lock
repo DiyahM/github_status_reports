@@ -89,6 +89,9 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    clockwork (1.1.0)
+      activesupport
+      tzinfo
     coderay (1.1.0)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
@@ -110,11 +113,17 @@ GEM
       nokogiri (~> 1.5)
       rails (>= 3, < 5)
     database_cleaner (1.4.0)
+    delayed_job (4.0.4)
+      activesupport (>= 3.0, < 4.2)
+    delayed_job_active_record (4.0.2)
+      activerecord (>= 3.0, < 4.2)
+      delayed_job (>= 3.0, < 4.1)
     diff-lcs (1.2.5)
     dotenv (1.0.2)
     dotenv-rails (1.0.2)
       dotenv (= 1.0.2)
     erubis (2.7.0)
+    excon (0.40.0)
     execjs (2.2.2)
     factory_girl (4.5.0)
       activesupport (>= 3.0.0)
@@ -160,6 +169,9 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    mandrill-api (1.0.52)
+      excon (>= 0.16.0, < 1.0)
+      json (>= 1.7.7, < 2.0)
     method_source (0.8.2)
     mime-types (1.25.1)
     mini_portile (0.6.2)
@@ -492,9 +504,11 @@ DEPENDENCIES
   bootstrap-sass!
   bootstrap-sass-extras
   bundler
+  clockwork
   coffee-rails (~> 4.0.0)
   cucumber-rails
   database_cleaner
+  delayed_job_active_record
   devise!
   dotenv-rails
   factory_girl_rails
@@ -504,6 +518,7 @@ DEPENDENCIES
   google-analytics-rails
   jbuilder (~> 2.0)
   jquery-rails
+  mandrill-api
   octokit (~> 3.0)
   omniauth-github!
   pg

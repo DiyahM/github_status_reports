@@ -9,7 +9,7 @@ Bundler.require(*Rails.groups)
 module GithubStatusReports
   class Application < Rails::Application
     config.middleware.use OmniAuth::Builder do
-      provider :github, ENV['GITHUB_KEY'], ENV['GITHUB_SECRET'], scope: "user:email,repo:status,read:org"
+      provider :github, ENV['GITHUB_KEY'], ENV['GITHUB_SECRET'], scope: "user:email,repo,read:org"
     end
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
