@@ -1,28 +1,20 @@
-== README
+== Emailed Status Reports based on Github Commits.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Quick hack project. Will update based on feedback received and usage.
 
-Things you may want to cover:
+Todo:
 
-* Ruby version
+* Add Tests
 
-* System dependencies
+* Refactor
 
-* Configuration
+* Allow for refresh of github repositories
 
-* Database creation
+* Add emails (beyond the github user) to receive updates
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
+* Prevent long email messages, add read more link to send to web
 
 * ...
 
+Submit an issue to request a feature or give feedback.
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
