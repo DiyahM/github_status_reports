@@ -44,3 +44,28 @@
 }
 
 
+.navbar-default .navbar-brand {
+  font-family: 'Oswald', sans-serif;
+ 
+  color: #1b1b1b;
+}
+
+.jumbotron {
+  padding: 45px 0 60px;
+  background-image: url("https://s3.amazonaws.com/gitdaily/img/cover_img.jpg");
+  margin-top: -25px;
+
+}
+
+.wrap {
+  min-height: 100%;
+
+}
+
+.footer {
+  position: relative;
+  height: 150px;
+  clear: both;
+  padding-top: 20px;
+  text-align: center;
+}

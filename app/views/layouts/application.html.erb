@@ -3,7 +3,7 @@
 <head>
   <title>Github Status Reports</title>
   <%= stylesheet_link_tag    'application', params[:controller], media: 'all', 'data-turbolinks-track' => true %>
-  <link href='https://fonts.googleapis.com/css?family=Lato:100,300,400,100italic,300italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Raleway|Lato:100,300' rel='stylesheet' type='text/css'>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 <!-- Prelang: Analytics / Google Analytics -->
@@ -13,7 +13,14 @@
 <%= bootstrap_flash %>
 
 
-<%= yield %>
+<div class="wrap">
+  <%= yield %>
+</div>
+
+<footer class="footer">
+  <div class="container">
+  Made for Humans by the Humans @ <a href="http://www.playpenlabs.com">Playpen Labs</a> | Questions? Feedback? Just want to say hi? <a href="mailto:email@playpenlabs.com">email@playpenlabs.com</a>
+</div></footer>
 
 </body>
 </html>
